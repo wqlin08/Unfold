@@ -1,2 +1,34 @@
 # Unfold
-Unfold is a lightweight, native macOS PDF reader for research papers. It integrates PDF reading, instant text translation, and local paper organization into a clean, distraction-free interface: simply open a paper, select text, and view the translation in the side panel.
+
+Unfold 是一款轻量、原生的 macOS 论文 PDF 阅读器。它把 PDF 阅读、划词翻译和本地论文整理放在一个安静的界面里：打开论文、选中文字、在右侧读译文即可。
+
+## 能做什么
+
+- 阅读、搜索、缩放和翻页文字型 PDF。
+- 选中英文后，用自己的 OpenAI 兼容 API 翻译为中文。
+- 按住 `Command ⌘` 可继续选取多段文字，跨页也可以。
+- 可选设置一个本地文件夹作为论文库；栏目就是普通文件夹，支持嵌套、导入、移动、复制和移到废纸篓。
+- 保存最近阅读的 20 篇论文，并恢复上次阅读页码。
+
+## 安装
+
+下载打开后把 Unfold 拖入“应用程序”文件夹。
+
+Unfold 目前未签名。第一次打开时，如 macOS 阻止运行，请在 Finder 中按住 `Control` 点按 Unfold，选择“打开”；或前往“系统设置 → 隐私与安全性”选择“仍要打开”。之后不需要重复操作。
+
+需要 macOS 14 或更高版本。
+
+## 开始使用
+
+1. 打开 Unfold，直接打开或拖入一篇 PDF。
+2. 点击右上角设置，填写 API 地址、模型名称和 API Key，保存后可测试连接。
+3. 在 PDF 中拖选英文，右侧会显示原文和译文。若要追加多段文字，第一段正常选择，后续拖选时按住 `Command ⌘`。
+4. 如需整理论文，在设置中选择一个本地文件夹作为论文库。此后左栏可以直接管理里面的 PDF 和栏目。
+
+API Key 仅保存在本机 macOS 钥匙串中；翻译时只会发送你当前选中的文字，不会上传整篇 PDF。
+
+## 提示
+
+- 仅支持带文字层的 PDF，暂不支持扫描件 OCR。
+- 删除论文或栏目会移到 macOS 废纸篓；移除“最近阅读”只会删除历史记录，不会删除 PDF。
+- `Esc` 可取消正在累积的多段选择。
